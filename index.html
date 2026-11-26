@@ -411,15 +411,16 @@ a{color:#D9B66E;text-decoration:none}a:hover{color:#F0D49A}
 <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 52px; line-height: 1.04; color: #F4EFE3">Next year in Jerusalem — in your own home.</h2>
 <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B9B3A6">Book a 20-minute call with our team. No obligation, in English.</p>
 </div>
-<div style="flex: 1 1 420px; min-width: 0; padding: 36px; border-radius: 24px; background: #121922; border: 1px solid #2A323D; display: flex; flex-direction: column; gap: 18px">
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #B9B3A6">Full name<input id="f-name" type="text" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #2F3844; background: #0A0E13; color: #F4EFE3; font-size: 16px"></label>
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #B9B3A6">Email<input id="f-email" type="email" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #2F3844; background: #0A0E13; color: #F4EFE3; font-size: 16px"></label>
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #B9B3A6">Phone (optional)<input id="f-phone" type="tel" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #2F3844; background: #0A0E13; color: #F4EFE3; font-size: 16px"></label>
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #B9B3A6">Preferred city<select id="f-city" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #2F3844; background: #0A0E13; color: #F4EFE3; font-size: 16px"><option>Jerusalem</option><option>Tel Aviv–Yafo</option><option>Netivot</option><option>Herzliya</option><option>Ashkelon</option><option>Open to suggestions</option></select></label>
-<a id="f-send" href="https://wa.me/972587347777" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; border-radius: 999px; background: #D9B66E; color: #0A0E13; font-weight: 600; font-size: 16px">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3z"></path></svg>Send via WhatsApp</a>
-<span style="font-size: 12px; line-height: 1.5; color: #8E887C; text-align: center">Opens WhatsApp with your details ready to send to our team.</span>
-</div>
+<form id="lead-form" novalidate style="flex: 1 1 420px; min-width: 0; padding: 36px; border-radius: 24px; background: #121922; border: 1px solid #2A323D; display: flex; flex-direction: column; gap: 18px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #B9B3A6">Full name<input id="f-name" name="name" type="text" required autocomplete="name" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #2F3844; background: #0A0E13; color: #F4EFE3; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #B9B3A6">Email<input id="f-email" name="email" type="email" required autocomplete="email" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #2F3844; background: #0A0E13; color: #F4EFE3; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #B9B3A6">Phone (optional)<input id="f-phone" name="phone" type="tel" autocomplete="tel" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #2F3844; background: #0A0E13; color: #F4EFE3; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #B9B3A6">Preferred city<select id="f-city" name="city" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #2F3844; background: #0A0E13; color: #F4EFE3; font-size: 16px"><option>Jerusalem</option><option>Tel Aviv–Yafo</option><option>Netivot</option><option>Herzliya</option><option>Ashkelon</option><option>Open to suggestions</option></select></label>
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+<button id="f-send" type="submit" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; border: 0; border-radius: 999px; background: #D9B66E; color: #0A0E13; font-family: inherit; font-weight: 600; font-size: 16px; cursor: pointer">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16v12H4z"></path><path d="m4 7 8 6 8-6"></path></svg>Book my call</button>
+<p id="f-status" role="status" aria-live="polite" style="margin: 0; font-size: 13px; line-height: 1.5; color: #8E887C; text-align: center">We'll reply by email within one business day.</p>
+</form>
 </div>
 </section>
 
@@ -432,11 +433,26 @@ a{color:#D9B66E;text-decoration:none}a:hover{color:#F0D49A}
 
 </div>
 <script>
-document.getElementById('f-send').addEventListener('click',function(e){
+(function(){
+var form=document.getElementById('lead-form');
+var btn=document.getElementById('f-send');
+var status=document.getElementById('f-status');
 var v=function(id){return (document.getElementById(id).value||'').trim();};
-var msg='New inquiry - Holy Land Realestate\nName: '+v('f-name')+'\nEmail: '+v('f-email')+'\nPhone: '+v('f-phone')+'\nPreferred city: '+v('f-city');
-this.href='https://wa.me/972587347777?text='+encodeURIComponent(msg);
+form.addEventListener('submit',function(e){
+e.preventDefault();
+if(form._honey.value){return;}
+if(!v('f-name')||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('f-email'))){
+status.style.color='#E0A08A';status.textContent='Please enter your name and a valid email address.';return;}
+btn.disabled=true;btn.style.opacity='0.6';status.style.color='#8E887C';status.textContent='Sending…';
+fetch('https://formsubmit.co/ajax/melloullaw@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+body:JSON.stringify({_subject:'New inquiry – Holy Land Real Estate ('+v('f-city')+')',_template:'table',_captcha:'false',
+name:v('f-name'),email:v('f-email'),phone:v('f-phone')||'—',city:v('f-city')})})
+.then(function(r){if(!r.ok)throw new Error();return r.json();})
+.then(function(d){if(d&&String(d.success)==='false')throw new Error();form.reset();status.style.color='#D9B66E';status.textContent='Thank you! We received your details and will be in touch within one business day.';})
+.catch(function(){status.style.color='#E0A08A';status.textContent='Something went wrong. Please email us directly at melloullaw@gmail.com.';})
+.finally(function(){btn.disabled=false;btn.style.opacity='1';});
 });
+})();
 </script>
 </body>
 </html>
